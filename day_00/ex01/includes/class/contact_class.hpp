@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:51:57 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/02 19:33:31 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/03 17:30:38 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class contact
 
 	public:
 		contact(void);
-		~contact(void);
+		~contact(void) {}
 
 		void	set_first_name(std::string name) {_first_name = name;}
 		void	set_last_name(std::string last_name) {_last_name = last_name;}

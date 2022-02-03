@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 15:04:11 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/02 19:02:59 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/03 15:14:21 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ class PhoneBook
 
 	public:
 		contact	contact[8];
-		PhoneBook(void);
-		~PhoneBook(void);
+		PhoneBook(void) {}
+		~PhoneBook(void) {}
 };
 
 #endif

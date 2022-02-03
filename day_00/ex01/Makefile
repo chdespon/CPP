@@ -10,7 +10,7 @@ INC_DIR	= $(shell find includes -type d)
 
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
-SRCS = PhoneBook.cpp PhoneBook_class.cpp contact_class.cpp
+SRCS = PhoneBook.cpp contact_class.cpp
 
 OBJ_DIR = objs
 
