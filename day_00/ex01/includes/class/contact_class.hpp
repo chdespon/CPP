@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:51:57 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/03 17:30:38 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/03 19:31:03 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class contact
 		std::string _darkest_secret;
 
 	public:
-		contact(void);
+		contact(void) {}
 		~contact(void) {}
 
 		void	set_first_name(std::string name) {_first_name = name;}
