@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 18:54:30 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/02 15:08:12 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/04 13:53:33 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@
 #include <stdlib.h>
 #include "contact_class.hpp"
 #include "PhoneBook_class.hpp"
+
+bool	add_contact(const int nb_contact, PhoneBook &PhoneBook);
 
 #endif

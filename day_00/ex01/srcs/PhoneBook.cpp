@@ -6,67 +6,11 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:32:17 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/03 19:37:49 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/04 14:26:26 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phone_book.hpp"
-
-static bool	add_contact(const int nb_contact, PhoneBook &PhoneBook)
-{
-	contact		*contact;
-	std::string	line;
-
-	contact = &PhoneBook.contact[nb_contact % 8];
-	std::cout << "Enter First name" << std::endl;
-	std::getline(std::cin, line);
-	if (line.empty() != false)
-	{
-		std::cout << "Empty entry, contact not ADD" << std::endl;
-		return (false);
-	}
-	contact->set_first_name(line);
-	std::cout << "Enter Last name" << std::endl;
-	std::getline(std::cin, line);
-	if (line.empty() != false)
-	{
-		std::cout << "Empty entry, contact not ADD" << std::endl;
-		return (false);
-	}
-	contact->set_last_name(line);
-	std::cout << "Enter Nickname" << std::endl;
-	std::getline(std::cin, line);
-	if (line.empty() != false)
-	{
-		std::cout << "Empty entry, contact not ADD" << std::endl;
-		return (false);
-	}
-	contact->set_nickname(line);
-	std::cout << "Enter Phone number" << std::endl;
-	std::getline(std::cin, line);
-	if (line.empty() != false)
-	{
-		std::cout << "Empty entry, contact not ADD" << std::endl;
-		return (false);
-	}
-	contact->set_phone_number(line);
-	if (contact->phone_number().find_first_not_of("0123456789") !=
-		std::string::npos)
-	{
-		std::cout << "Phone number incorrect, contact not ADD" << std::endl;
-		return (false);
-	}
-	std::cout << "Enter Darkest secret" << std::endl;
-	std::getline(std::cin, line);
-	if (line.empty() != false)
-	{
-		std::cout << "Empty entry, contact not ADD" << std::endl;
-		return (false);
-	}
-	contact->set_darkest_secret(line);
-	system("clear");
-	return (true);
-}
 
 static void	print_info(std::string info, int first_last)
 {
@@ -126,6 +70,7 @@ static bool	print_contact(const int nb_contact, const PhoneBook PhoneBook)
 	print_info("First Name", 0);
 	print_info("Last name", 0);
 	print_info("Nickname", 2);
+	std::cout << "---------------------------------------------" << std::endl;
 	i = 0;
 	while (i < nb_contact && i < 8)
 	{

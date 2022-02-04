@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:51:57 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/03 19:31:03 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/04 14:37:43 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 class contact
 {
 	private:
-		std::string _first_name;
-		std::string _last_name;
-		std::string _nickname;
-		std::string _phone_number;
-		std::string _darkest_secret;
+		std::string	_first_name;
+		std::string	_last_name;
+		std::string	_nickname;
+		std::string	_phone_number;
+		std::string	_darkest_secret;
 
 	public:
 		contact(void) {}
@@ -30,7 +30,7 @@ class contact
 		void	set_last_name(std::string last_name) {_last_name = last_name;}
 		void	set_nickname(std::string nickname) {_nickname = nickname;}
 		void	set_phone_number(std::string phone_number) {_phone_number = phone_number;}
-		void	set_darkest_secret(std::string name) {_darkest_secret = name;}
+		void	set_darkest_secret(std::string darkest_secret) {_darkest_secret = darkest_secret;}
 
 		std::string	first_name(void) const {return _first_name;}
 		std::string	last_name(void) const {return _last_name;}
