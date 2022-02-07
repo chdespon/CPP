@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/27 15:32:17 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/04 14:26:26 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/04 15:37:42 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,25 +90,30 @@ int	main()
 	int			nb_contact;
 
 	nb_contact = 0;
+	system("clear");
+	std::cout << "************************************\n"
+		"*****WELCOME TO YOUR PHONE BOOK*****\n"
+		"************************************" << std::endl;
 	std::cout << "Type \"EXIT\" \"ADD\" or \"SEARCH\"" << std::endl;
 	while (std::getline(std::cin, line))
 	{
 		if (line.compare("EXIT") == 0)
-			return (0);
+			break ;
 		else if (line.compare("ADD") == 0 &&
 			add_contact(nb_contact, PhoneBook) == true)
 		{
 			std::cout << "Contact ADD" << std::endl;
 			nb_contact++;
 		}
-		else if (line.compare("SEARCH") == 0 &&
-			print_contact(nb_contact, PhoneBook) == true)
-		{
+		else if (line.compare("SEARCH") == 0
+			&& print_contact(nb_contact, PhoneBook) == true)
 			search_contact(nb_contact, PhoneBook);
-		}
 		std::cout << "Type \"EXIT\" \"ADD\" or \"SEARCH\"" << std::endl;
 		if (nb_contact >= 8)
 			std::cout << "Next ADD will remove the oldest contact" << std::endl;
 	}
+	std::cout << "************************************\n"
+		"************See you soon************\n"
+		"************************************" << std::endl;
 	return (0);
 }
