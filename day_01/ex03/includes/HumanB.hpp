@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 19:26:47 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/07 19:46:01 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/08 15:59:35 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,16 @@
 class HumanB
 {
 	private:
-		std::string _name;
+		std::string	_name;
+		Weapon		*_weapon;
 
 	public:
 		HumanB(std::string name);
-		~HumanB(void) {}
+		~HumanB(void);
 
 		std::string	getName(void) const {return _name;}
+
+		void	setWeapon(Weapon weapon);
 
 		void	attack();
 };

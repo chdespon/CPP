@@ -6,13 +6,11 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 18:41:20 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/07 19:16:01 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/08 15:55:04 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
 Weapon::Weapon(std::string type): _type(type)
-{
-	return ;
-}
+{}
