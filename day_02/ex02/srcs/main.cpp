@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/07 17:28:23 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/11 12:23:59 by chdespon         ###   ########.fr       */
+/*   Created: 2022/02/11 16:46:09 by chdespon          #+#    #+#             */
+/*   Updated: 2022/02/11 16:47:15 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Fixed.hpp"
 
-#include <iostream>
-
-class Zombie
+int	main(void)
 {
-	private:
-		std::string _name;
-
-	public:
-		Zombie();
-		~Zombie();
-
-		void	announce();
-		void	set_name(std::string name) {_name = name;}
-
-		std::string	get_name(void) const {return _name;}
-
-};
-
-Zombie* zombieHorde(int N, std::string name);
-
-#endif
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
+	return 0;
+}
