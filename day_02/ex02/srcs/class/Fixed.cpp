@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 17:43:09 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/11 20:11:07 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/15 17:27:41 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,36 +61,46 @@ int	Fixed::getRawBits(void) const
 	return (_val);
 }
 
-Fixed &	Fixed::operator=(const Fixed &raw)
+Fixed &Fixed::operator=(const Fixed &rhs)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if (this != &raw)
-		_val = raw.getRawBits();
+	if (this != &rhs)
+		_val = rhs._val;
 	return (*this);
 }
 
-Fixed	Fixed::operator+(Fixed lhs, const Fixed &raw)
+Fixed	operator+(Fixed &lhs, const Fixed &rhs)
 {
-	_val += raw.getRawBits();
-	return (lhs);
+	Fixed	res;
+	res.setRawBits(lhs.getRawBits() + rhs.getRawBits());
+	return (res);
 }
 
-Fixed	Fixed::operator-(Fixed lhs, const Fixed &raw)
+Fixed	operator-(Fixed &lhs, const Fixed &rhs)
 {
-	_val -= raw.getRawBits();
-	return (lhs);
+	Fixed	res;
+	res.setRawBits(lhs.getRawBits() - rhs.getRawBits());
+	return (res);
 }
 
-Fixed	Fixed::operator*(Fixed lhs, const Fixed &raw)
+Fixed	operator*(Fixed &lhs, const Fixed &rhs)
 {
-	_val *= raw.getRawBits();
-	return (lhs);
+	Fixed res;
+	int power;
+
+	power = 256;
+	res.setRawBits(roundf((lhs.toFloat() * rhs.toFloat()) * power));
+	return (res);
+	// Fixed	res;
+	// res.setRawBits(lhs.getRawBits() * raw.getRawBits());
+	// return (res);
 }
 
-Fixed	Fixed::operator/(Fixed lhs, const Fixed &raw)
+Fixed	operator/(Fixed &lhs, const Fixed &raw)
 {
-	_val /= raw.getRawBits();
-	return (lhs);
+	Fixed	res;
+	res.setRawBits(lhs.getRawBits() / raw.getRawBits());
+	return (res);
 }
 
 Fixed	&Fixed::operator++(void)
@@ -99,7 +109,7 @@ Fixed	&Fixed::operator++(void)
 	return (*this);
 }
 
-Fixed	&Fixed::operator++(void)
+Fixed	&Fixed::operator--(void)
 {
 	_val--;
 	return (*this);
@@ -121,33 +131,61 @@ Fixed	Fixed::operator--(int)
 
 bool	Fixed::operator==(const Fixed &rhs) const
 {
-	return (_val == rhs.getRawBits());
+	if (_val == rhs.getRawBits())
+		return (true);
+	return (false);
 }
 
 bool	Fixed::operator<(const Fixed &rhs) const
 {
-	return (_val < rhs.getRawBits());
-
+	if (_val < rhs.getRawBits())
+		return (true);
+	return (false);
 }
 
-bool	Fixed::operator!=(const fixed &rhs) const
+bool	operator!=(const Fixed &lhs, const Fixed &rhs)
 {
-	return (!(*(this == rhs)));
+	return !(lhs == rhs);
+}
+bool	operator>(const Fixed &lhs, const Fixed &rhs)
+{
+	return rhs < lhs;
+}
+bool	operator<=(const Fixed &lhs, const Fixed &rhs)
+{
+	return !(lhs > rhs);
+}
+bool	operator>=(const Fixed &lhs, const Fixed &rhs)
+{
+	return !(lhs < rhs);
 }
 
-bool	Fixed::operator>(const fixed &rhs) const
+const Fixed	&Fixed::max(const Fixed &lhs, const Fixed &rhs)
 {
-	return (rhs < *this);
+	if (lhs > rhs)
+		return (lhs);
+	return (rhs);
 }
 
-bool	Fixed::operator<=(const fixed &rhs) const
+Fixed	&Fixed::max(Fixed &lhs, Fixed &rhs)
 {
-	return (!(*(this > rhs)));
+	if (lhs > rhs)
+		return (lhs);
+	return (rhs);
 }
 
-bool	Fixed::operator>=(const fixed &rhs) const
+const Fixed	&Fixed::min(const Fixed &lhs, const Fixed &rhs)
 {
-	return (!(*(this < rhs)));
+	if (lhs < rhs)
+		return (lhs);
+	return (rhs);
+}
+
+Fixed	&Fixed::min(Fixed &lhs, Fixed &rhs)
+{
+	if (lhs < rhs)
+		return (lhs);
+	return (rhs);
 }
 
 std::ostream	&operator<<(std::ostream &os, const Fixed &rhs)
