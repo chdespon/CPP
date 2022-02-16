@@ -6,39 +6,32 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 17:43:09 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/15 17:27:41 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/16 14:12:05 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 Fixed::Fixed(void)
-{
-	std::cout << "Default constructor called" << std::endl;
-}
+{}
 
 Fixed::Fixed(const float val)
 {
-	std::cout << "Float constructor called" << std::endl;
 	_val = roundf((1 << _bits) * val);
 }
 
 Fixed::Fixed(const int val)
 {
-	std::cout << "Int constructor called" << std::endl;
 	_val = val << _bits;
 }
 
 Fixed::Fixed(const Fixed &cpy)
 {
-	std::cout << "Copy constructor called" << std::endl;
 	*this = cpy;
 }
 
 Fixed::~Fixed(void)
-{
-	std::cout << "Destructor called" << std::endl;
-}
+{}
 
 float	Fixed::toFloat(void) const
 {
@@ -63,43 +56,39 @@ int	Fixed::getRawBits(void) const
 
 Fixed &Fixed::operator=(const Fixed &rhs)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &rhs)
 		_val = rhs._val;
 	return (*this);
 }
 
-Fixed	operator+(Fixed &lhs, const Fixed &rhs)
+Fixed	Fixed::operator+(const Fixed &rhs)
 {
 	Fixed	res;
-	res.setRawBits(lhs.getRawBits() + rhs.getRawBits());
+	res.setRawBits(_val + rhs.getRawBits());
 	return (res);
 }
 
-Fixed	operator-(Fixed &lhs, const Fixed &rhs)
+Fixed	Fixed::operator-(const Fixed &rhs)
 {
 	Fixed	res;
-	res.setRawBits(lhs.getRawBits() - rhs.getRawBits());
+	res.setRawBits(_val - rhs.getRawBits());
 	return (res);
 }
 
-Fixed	operator*(Fixed &lhs, const Fixed &rhs)
+Fixed	Fixed::operator*(const Fixed &rhs)
 {
-	Fixed res;
-	int power;
+	Fixed	res;
+	int		power;
 
 	power = 256;
-	res.setRawBits(roundf((lhs.toFloat() * rhs.toFloat()) * power));
+	res.setRawBits(roundf((this->toFloat() * rhs.toFloat()) * power));
 	return (res);
-	// Fixed	res;
-	// res.setRawBits(lhs.getRawBits() * raw.getRawBits());
-	// return (res);
 }
 
-Fixed	operator/(Fixed &lhs, const Fixed &raw)
+Fixed	Fixed::operator/(const Fixed &raw)
 {
 	Fixed	res;
-	res.setRawBits(lhs.getRawBits() / raw.getRawBits());
+	res.setRawBits(_val / raw.getRawBits());
 	return (res);
 }
 
