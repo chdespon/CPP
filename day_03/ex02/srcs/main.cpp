@@ -6,34 +6,18 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:46:23 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 12:48:56 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/17 17:49:08 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Claptrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main()
 {
-	ClapTrap	Lucas("Lucas");
-	ClapTrap	Albe("Albe");
-	ClapTrap	Vincent;
+	FragTrap	Lucas("Lucas");
 
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Lucas.attack("Albe");
-	Albe.takeDamage(0);
-	ClapTrap	cpy(Albe);
-	cpy.attack("Albe");
-	Albe.attack("Lucas");
-	Albe.beRepaired(2);
-	Albe.attack("Lucas");
+	Lucas.highFivesGuys();
 	return (0);
 }

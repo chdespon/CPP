@@ -6,22 +6,23 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:39:19 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 14:22:12 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/17 16:58:16 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef CLAPTRAP_01_HPP
+# define CLAPTRAP_01_HPP
 
-#include <iostream>
+# include <iostream>
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string	_name;
 		int	_HitPoints;
 		int	_EnergiePoints;
 		int	_AttackDamage;
+		ClapTrap(std::string name, int HitPoints, int EnergiePoints, int AttackDamage);
 
 	public:
 		ClapTrap();
