@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 12:15:27 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/22 17:21:16 by chdespon         ###   ########.fr       */
+/*   Created: 2022/02/16 14:20:15 by chdespon          #+#    #+#             */
+/*   Updated: 2022/02/16 14:42:16 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef POINT_HPP
+# define POINT_HPP
 
-# include "Claptrap.hpp"
+# include "Fixed.hpp"
 
-class ScavTrap : public virtual ClapTrap
+class Point
 {
 	private:
+		Fixed	_x;
+		Fixed	_y;
 
 	public:
-		ScavTrap();
-		ScavTrap(std::string name);
-		ScavTrap(const ScavTrap &cpy);
-		~ScavTrap();
+		Point();
+		Point(const float x, const float y);
+		Point(const Point &cpy);
+		~Point();
 
-		ScavTrap	&operator=(const ScavTrap &rhs);
+		float	getX(void);
+		float	getY(void);
 
-		void	guardGate(void);
-		void	attack(const std::string& target);
+		Point	&operator=(const Point &rhs);
 };
+
+bool	bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

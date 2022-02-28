@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 12:14:48 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 16:57:10 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/28 18:15:26 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ ScavTrap::ScavTrap(const ScavTrap &cpy)
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap " << _name << " died" << std::endl;
+	std::cout << "ScavTrap " << _name << " destructor call" << std::endl;
 }
 
 void	ScavTrap::attack(const std::string& target)

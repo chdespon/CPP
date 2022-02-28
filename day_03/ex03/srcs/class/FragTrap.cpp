@@ -6,19 +6,25 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:28:31 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 17:49:28 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/28 17:13:27 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void): ClapTrap("Vincent", 100, 100, 30)
+FragTrap::FragTrap(void): ClapTrap("Vincent")
 {
+	_HitPoints = 100;
+	_EnergiePoints = 100;
+	_AttackDamage = 30;
 	std::cout << "FragTrap creation of " << _name << std::endl;
 }
 
-FragTrap::FragTrap(std::string name): ClapTrap(name, 100, 100, 30)
+FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
+	_HitPoints = 100;
+	_EnergiePoints = 100;
+	_AttackDamage = 30;
 	std::cout << "FragTrap creation of " << _name << std::endl;
 }
 
@@ -30,7 +36,7 @@ FragTrap::FragTrap(const FragTrap &cpy)
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << "FragTrap " << _name << " died" << std::endl;
+	std::cout << "FragTrap " << _name << " destructor call" << std::endl;
 }
 
 void	FragTrap::highFivesGuys(void)

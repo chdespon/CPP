@@ -6,20 +6,26 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 12:14:48 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 16:57:10 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/28 17:13:35 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Claptrap.hpp"
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void): ClapTrap("Vincent", 100, 50, 20)
+ScavTrap::ScavTrap(void): ClapTrap("Vincent")
 {
+	_HitPoints = 100;
+	_EnergiePoints = 50;
+	_AttackDamage = 20;
 	std::cout << "ScavTrap creation of " << _name << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name): ClapTrap(name, 100, 50, 20)
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
+	_HitPoints = 100;
+	_EnergiePoints = 50;
+	_AttackDamage = 20;
 	std::cout << "ScavTrap creation of " << _name << std::endl;
 }
 
@@ -31,7 +37,7 @@ ScavTrap::ScavTrap(const ScavTrap &cpy)
 
 ScavTrap::~ScavTrap(void)
 {
-	std::cout << "ScavTrap " << _name << " died" << std::endl;
+	std::cout << "ScavTrap " << _name << " destructor call" << std::endl;
 }
 
 void	ScavTrap::attack(const std::string& target)

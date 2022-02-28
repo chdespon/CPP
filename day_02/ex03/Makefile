@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = BSP
 
 CC = clang++
 
@@ -10,7 +10,7 @@ INC_DIR	= $(shell find includes -type d)
 
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp Fixed.cpp
 
 OBJ_DIR = objs
 

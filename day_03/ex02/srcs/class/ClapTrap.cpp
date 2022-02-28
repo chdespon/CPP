@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:46:57 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 17:22:30 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/28 18:17:01 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ _name(cpy._name), _HitPoints(10), _EnergiePoints(10), _AttackDamage(0)
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << "ClapTrap " << _name << " died" << std::endl;
+	std::cout << "ClapTrap " << _name << " destructor call" << std::endl;
 }
 
 void	ClapTrap::setHitPoints(int amount)
@@ -78,11 +78,14 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	_HitPoints -= amount;
 	if (_HitPoints < 0)
-		_HitPoints = 0;
-	std::cout << _name << " took " << amount
+		std::cout << _name << " is dead he cannot take damage anymore" << std::endl;
+	else
+	{
+		_HitPoints -= amount;
+		std::cout << _name << " took " << amount
 		<< " points of damage!" << std::endl;
+	}
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)

@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 18:24:42 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 18:49:02 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/22 18:55:27 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@ class DiamondTrap : public FragTrap, public ScavTrap
 
 	public:
 		DiamondTrap();
+		DiamondTrap(std::string name);
 		DiamondTrap(const DiamondTrap &cpy);
 		~DiamondTrap();
 
 		DiamondTrap	&operator=(const DiamondTrap &rhs);
+
+		void	attack(const std::string& target);
 
 		void	whoAmI();
 };

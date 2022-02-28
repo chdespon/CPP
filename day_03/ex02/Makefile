@@ -11,6 +11,7 @@ INC_DIR	= $(shell find includes -type d)
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+
 OBJ_DIR = objs
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.cpp=%.o))

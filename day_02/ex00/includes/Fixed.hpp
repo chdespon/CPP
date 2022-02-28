@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 17:32:40 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/11 15:15:33 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/15 15:39:25 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,7 @@ class Fixed
 
 		int	getRawBits(void) const;
 };
+
+class
 
 #endif

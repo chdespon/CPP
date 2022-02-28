@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:28:31 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 17:49:28 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/28 18:15:16 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ FragTrap::FragTrap(const FragTrap &cpy)
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << "FragTrap " << _name << " died" << std::endl;
+	std::cout << "FragTrap " << _name << " destructor call" << std::endl;
 }
 
 void	FragTrap::highFivesGuys(void)

@@ -2,7 +2,7 @@ NAME = DiamondTrap
 
 CC = clang++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow #-g3 -fsanitize=address
 
 SRCS_DIR = $(shell find srcs -type d)
 
@@ -11,6 +11,7 @@ INC_DIR	= $(shell find includes -type d)
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+
 OBJ_DIR = objs
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:%.cpp=%.o))

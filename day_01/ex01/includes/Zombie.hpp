@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 17:28:23 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/11 12:23:59 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/02/28 16:45:02 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ class Zombie
 
 };
 
-Zombie* zombieHorde(int N, std::string name);
+Zombie*	zombieHorde(int N, std::string name);
 
 #endif
