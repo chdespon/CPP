@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:25:35 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/22 17:21:21 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/02 18:12:26 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 # define FRAGTRAP_HPP
 
 # include "Claptrap.hpp"
+
+# define FragHitPoints 100
+# define FragEnergiePoints 100
+# define FragAttackdamage 30
 
 class FragTrap : public virtual ClapTrap
 {

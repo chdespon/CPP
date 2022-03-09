@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 18:38:18 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/01 19:23:51 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/02 16:44:34 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Dog::~Dog(void)
 
 void	Dog::makeSound(void) const
 {
-	std::cout << "WUOAF WOAF !!!" << std::endl;
+	std::cout << "WOOF WOOF !!!" << std::endl;
 }
 
 Dog	&Dog::operator=(const Dog &rhs)

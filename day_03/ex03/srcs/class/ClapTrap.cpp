@@ -6,11 +6,12 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:46:57 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/28 17:13:10 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/01 17:17:48 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Claptrap.hpp"
+
 
 ClapTrap::ClapTrap(void):
 _name("Vincent"), _HitPoints(10), _EnergiePoints(10), _AttackDamage(0)

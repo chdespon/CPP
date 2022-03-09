@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 17:28:31 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/28 17:13:27 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/02 18:12:39 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 FragTrap::FragTrap(void): ClapTrap("Vincent")
 {
-	_HitPoints = 100;
-	_EnergiePoints = 100;
-	_AttackDamage = 30;
+	_HitPoints = FragHitPoints;
+	_EnergiePoints = FragEnergiePoints;
+	_AttackDamage = FragAttackdamage;
 	std::cout << "FragTrap creation of " << _name << std::endl;
 }
 

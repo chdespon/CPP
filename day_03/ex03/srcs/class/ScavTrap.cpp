@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 12:14:48 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/28 17:13:35 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/02 18:12:04 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 ScavTrap::ScavTrap(void): ClapTrap("Vincent")
 {
-	_HitPoints = 100;
-	_EnergiePoints = 50;
-	_AttackDamage = 20;
+	_HitPoints = ScavHitPoints;
+	_EnergiePoints = ScavEnergiePoints;
+	_AttackDamage = ScavAttackdamage;
 	std::cout << "ScavTrap creation of " << _name << std::endl;
 }
 
