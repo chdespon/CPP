@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 17:32:40 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/10 15:23:21 by chdespon         ###   ########.fr       */
+/*   Created: 2022/03/11 16:27:17 by chdespon          #+#    #+#             */
+/*   Updated: 2022/03/14 19:48:33 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
-#include <iostream>
-
-class Fixed
+# include "Form.hpp"
+# include <stdlib.h>
+class RobotomyRequestForm: public Form
 {
 	private:
-		int	_Val;
-		const static int	_Bits = 8;
+		std::string	_target;
 
 	public:
-		Fixed();
-		Fixed(const Fixed &cpy);
-		~Fixed();
+		RobotomyRequestForm();
+		RobotomyRequestForm(std::string target);
+		RobotomyRequestForm(const RobotomyRequestForm &cpy);
+		~RobotomyRequestForm();
 
-		Fixed	&operator=(const Fixed &rhs);
+		RobotomyRequestForm	&operator=(const RobotomyRequestForm &rhs);
 
-		void	setRawBits(const int raw);
-
-		int	getRawBits(void) const;
+		void	executeForm(void) const;
 };
 
 #endif

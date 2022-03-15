@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 17:32:40 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/10 15:23:21 by chdespon         ###   ########.fr       */
+/*   Created: 2022/03/11 15:55:29 by chdespon          #+#    #+#             */
+/*   Updated: 2022/03/14 19:45:32 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef SHURBBERYCREATIONFORM_HPP
+# define SHURBBERYCREATIONFORM_HPP
 
-#include <iostream>
+# include "Form.hpp"
+# include <fstream>
 
-class Fixed
+class ShrubberyCreationForm: public Form
 {
 	private:
-		int	_Val;
-		const static int	_Bits = 8;
+		std::string	_target;
 
 	public:
-		Fixed();
-		Fixed(const Fixed &cpy);
-		~Fixed();
+		ShrubberyCreationForm();
+		ShrubberyCreationForm(std::string target);
+		ShrubberyCreationForm(const ShrubberyCreationForm &cpy);
+		~ShrubberyCreationForm();
 
-		Fixed	&operator=(const Fixed &rhs);
+		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &rhs);
 
-		void	setRawBits(const int raw);
-
-		int	getRawBits(void) const;
+		void	executeForm(void) const;
 };
 
 #endif

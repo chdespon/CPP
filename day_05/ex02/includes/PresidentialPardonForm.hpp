@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 17:32:40 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/10 15:23:21 by chdespon         ###   ########.fr       */
+/*   Created: 2022/03/11 16:21:49 by chdespon          #+#    #+#             */
+/*   Updated: 2022/03/14 19:34:52 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 
-#include <iostream>
+# include "Form.hpp"
 
-class Fixed
+class PresidentialPardonForm: public Form
 {
 	private:
-		int	_Val;
-		const static int	_Bits = 8;
+		std::string	_target;
 
 	public:
-		Fixed();
-		Fixed(const Fixed &cpy);
-		~Fixed();
+		PresidentialPardonForm();
+		PresidentialPardonForm(std::string target);
+		PresidentialPardonForm(const PresidentialPardonForm &cpy);
+		~PresidentialPardonForm();
 
-		Fixed	&operator=(const Fixed &rhs);
+		PresidentialPardonForm	&operator=(const PresidentialPardonForm &rhs);
 
-		void	setRawBits(const int raw);
-
-		int	getRawBits(void) const;
+		void	executeForm(void) const;
 };
 
 #endif

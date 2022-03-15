@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 17:43:09 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/16 14:12:05 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/10 15:25:19 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,5 +180,5 @@ Fixed	&Fixed::min(Fixed &lhs, Fixed &rhs)
 std::ostream	&operator<<(std::ostream &os, const Fixed &rhs)
 {
 	os << rhs.toFloat();
-	return os;
+	return (os);
 }

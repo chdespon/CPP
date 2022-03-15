@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:39:19 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 14:22:12 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/10 15:24:36 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ class ClapTrap
 		int		getHitPoints(void);
 		int		getEnergiePoints(void);
 		int		getAttackDamage(void);
-
 };
 
 #endif
