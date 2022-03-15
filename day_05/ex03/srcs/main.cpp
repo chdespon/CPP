@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 19:26:52 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 20:00:32 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/15 18:23:08 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,55 +16,34 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int		main(void)
 {
-	Bureaucrat	Lucas("Lucas", 2);
-	Bureaucrat	Albe("Albe", 148);
+	Intern someRandomIntern;
+	Form* rrf;
+	Form *scf;
+	Form *rrf2;
+	Form *wrongName;
 
-	Lucas.upgrade();
-	std::cout << Lucas << std::endl;
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	scf = someRandomIntern.makeForm("shrubbery creation", "Lucas");
+	// rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	rrf2 = someRandomIntern.makeForm("robotomy request", "Bender");
 
-	Albe.downgrade();
-	std::cout << Albe << std::endl;
 
-	std::cout << "\n_____TEST OF SHRUBBERY CREATION FORM_____\n\n";
+	try
+	{
+		wrongName = someRandomIntern.makeForm("robotomy reqfdsuest", "Bender");
+	}
+	catch (std::exception & error)
+	{
+		std::cout << error.what() << std::endl;
+	}
 
-	ShrubberyCreationForm	scf("fuc*?#!");
-
-	std::cout << scf << std::endl;
-	Albe.signForm(scf);
-	Lucas.signForm(scf);
-	std::cout << std::endl;
-	Lucas.executeForm(scf);
-	Albe.executeForm(scf);
-
-	std::cout << "\n_____TEST OF ROBOTOMY REQUEST FORM_____\n\n";
-
-	RobotomyRequestForm	rrf("Marvin");
-
-	std::cout << rrf << std::endl;
-	Albe.signForm(rrf);
-	Lucas.signForm(rrf);
-	std::cout << std::endl;
-	Lucas.executeForm(rrf);
-	Albe.executeForm(rrf);
-
-	std::cout << "\n_____TEST OF PRESIDENTIAL PARDON FORM_____\n\n";
-
-	PresidentialPardonForm	ppf("Arthur");
-
-	std::cout << ppf << std::endl;
-	Albe.signForm(ppf);
-	Lucas.signForm(ppf);
-	std::cout << std::endl;
-	Lucas.executeForm(ppf);
-	Albe.executeForm(ppf);
-
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
+	delete rrf;
+	delete rrf2;
+	delete scf;
 
 	return (0);
 }

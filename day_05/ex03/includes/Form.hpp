@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:04:14 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 19:36:54 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/15 17:44:47 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ class Form
 		void			beSigned(Bureaucrat const &bureaucrat);
 		void			execute_checking(Bureaucrat const &bureaucrat) const;
 		virtual void	executeForm(void) const = 0;
+		virtual Form	*clone(std::string target) = 0;
+
 
 };
 

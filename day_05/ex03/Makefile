@@ -11,7 +11,7 @@ INC_DIR	= $(shell find includes -type d)
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
 SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
-			PresidentialPardonForm.cpp RobotomyRequestForm.cpp
+			PresidentialPardonForm.cpp RobotomyRequestForm.cpp Intern.cpp
 
 OBJ_DIR = objs
 

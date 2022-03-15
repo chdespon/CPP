@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 15:37:30 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 19:47:59 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/15 17:42:50 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,10 @@ RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm &r
 	if (this != &rhs)
 		_target = rhs._target;
 	return (*this);
+}
+
+Form	*RobotomyRequestForm::clone(std::string target)
+{
+	Form	*clone = new RobotomyRequestForm(target);
+	return (clone);
 }

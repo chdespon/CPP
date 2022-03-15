@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:30:14 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 19:57:40 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/15 17:41:59 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ShrubberyCreationForm::executeForm(void) const
 		<< "             \\\n"
 		<< "              *\n"
 		<< "\n";
-	// of.close();
+	of.close();
 }
 
 ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationForm &rhs)
@@ -88,4 +88,10 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationF
 	if (this != &rhs)
 		_target = rhs._target;
 	return (*this);
+}
+
+Form	*ShrubberyCreationForm::clone(std::string target)
+{
+	Form	*clone = new ShrubberyCreationForm(target);
+	return (clone);
 }

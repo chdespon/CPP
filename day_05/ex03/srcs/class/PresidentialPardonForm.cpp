@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:28:47 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 19:55:24 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/15 17:43:06 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,10 @@ PresidentialPardonForm	&PresidentialPardonForm::operator=(const PresidentialPard
 	if (this != &rhs)
 		_target = rhs._target;
 	return (*this);
+}
+
+Form	*PresidentialPardonForm::clone(std::string target)
+{
+	Form	*clone = new PresidentialPardonForm(target);
+	return (clone);
 }

@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 15:55:29 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 19:45:32 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/15 17:41:48 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class ShrubberyCreationForm: public Form
 		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm &rhs);
 
 		void	executeForm(void) const;
+		Form	*clone(std::string target);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:27:17 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 19:48:33 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/15 17:42:22 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class RobotomyRequestForm: public Form
 		RobotomyRequestForm	&operator=(const RobotomyRequestForm &rhs);
 
 		void	executeForm(void) const;
+		Form	*clone(std::string target);
 };
 
 #endif

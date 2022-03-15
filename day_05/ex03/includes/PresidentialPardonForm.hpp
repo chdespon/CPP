@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:21:49 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 19:34:52 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/03/15 17:42:15 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class PresidentialPardonForm: public Form
 		PresidentialPardonForm	&operator=(const PresidentialPardonForm &rhs);
 
 		void	executeForm(void) const;
+		Form	*clone(std::string target);
 };
 
 #endif
