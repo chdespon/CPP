@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.cpp                                          :+:      :+:    :+:   */
+/*   Harl.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,45 +10,45 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#include "Harl.hpp"
 
-void	Karen::_debug(void)
+void	Harl::_debug(void)
 {
 	std::cout << "I love having extra bacon for my 7XL-double-cheese-triple-"
-		"pickle-specialketchup burger. I really do !" << std::endl;
+		"pickle-specialketchup burger. I really do !\n" << std::endl;
 }
 
-void	Karen::_info(void)
+void	Harl::_info(void)
 {
 	std::cout << "I cannot believe adding extra bacon costs more money. "
 		"You didn’t put enough bacon in my burger ! If you did, I wouldn’t be "
-		"asking for more !" << std::endl;
+		"asking for more !\n" << std::endl;
 }
 
-void	Karen::_warning(void)
+void	Harl::_warning(void)
 {
 	std::cout << "I think I deserve to have some extra bacon for free. "
 		"I’ve been coming for years whereas you started working here since "
-		"last month." << std::endl;
+		"last month.\n" << std::endl;
 }
 
-void	Karen::_error(void)
+void	Harl::_error(void)
 {
 	std::cout << "This is unacceptable ! I want to speak to the manager"
-		"now." << std::endl;
+		"now.\n" << std::endl;
 }
 
-void	Karen::complain(std::string level)
+void	Harl::complain(std::string level)
 {
 	int	i_level;
 
 	i_level = 0;
 	std::string complaint_level[] =
 	{
-		"debug",
-		"info",
-		"warning",
-		"error"
+		"DEBUG",
+		"INFO",
+		"WARNING",
+		"ERROR"
 	};
 
 	for (int i = 0; i < 4; i++)
@@ -60,26 +60,21 @@ void	Karen::complain(std::string level)
 	switch (i_level)
 	{
 		case 0:
+			std::cout << "[ DEBUG ]" << std::endl;
 			_debug();
-			_info();
-			_warning();
-			_error();
-			break;
 
 		case 1:
+			std::cout << "[ INFO ]" << std::endl;
 			_info();
-			_warning();
-			_error();
-			break;
 
 		case 2:
+			std::cout << "[ WARNING ]" << std::endl;
 			_warning();
-			_error();
-			break;
 
 		case 3:
+			std::cout << "[ ERROR ]" << std::endl;
 			_error();
-			break;
+			break ;
 
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]"

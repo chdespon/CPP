@@ -1,6 +1,6 @@
-NAME = Karen
+NAME = Harl
 
-CC = clang++
+CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -10,7 +10,7 @@ INC_DIR	= $(shell find includes -type d)
 
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
-SRCS = main.cpp Karen.cpp
+SRCS = main.cpp Harl.cpp
 
 OBJ_DIR = objs
 

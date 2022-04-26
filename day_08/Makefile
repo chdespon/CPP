@@ -1,8 +1,8 @@
-NAME = ZombieHorde
+NAME = Intern
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g #3 -fsanitize=address
 
 SRCS_DIR = $(shell find srcs -type d)
 
@@ -10,7 +10,8 @@ INC_DIR	= $(shell find includes -type d)
 
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
-SRCS = main.cpp Zombie.cpp ZombieHorde.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
+			PresidentialPardonForm.cpp RobotomyRequestForm.cpp Intern.cpp
 
 OBJ_DIR = objs
 
@@ -62,6 +63,7 @@ clean:
 				@echo -n "$(_WHITE)Deleting Objects Directory $(_YELLOW)$(OBJ_DIR)" \
 				"$(_WHITE) ... "
 				@rm -rf $(OBJ_DIR)
+				@rm -f *.replace
 				@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
 fclean:			clean

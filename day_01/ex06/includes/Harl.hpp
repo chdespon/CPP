@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Harl.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef Harl_HPP
+# define Harl_HPP
 
 # include <iostream>
 
-class Karen
+class Harl
 {
 	private:
 		void	_debug(void);
@@ -24,8 +24,8 @@ class Karen
 		void	_error(void);
 
 	public:
-		Karen() {}
-		~Karen() {}
+		Harl() {}
+		~Harl() {}
 
 		void	complain(std::string level);
 

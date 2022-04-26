@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:54:25 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/09 16:21:29 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/04/22 19:14:32 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 
-class Karen
+class Harl
 {
 	private:
 		void	_debug(void);
@@ -24,8 +24,8 @@ class Karen
 		void	_error(void);
 
 	public:
-		Karen() {}
-		~Karen() {}
+		Harl() {}
+		~Harl() {}
 
 		void	complain(std::string level);
 

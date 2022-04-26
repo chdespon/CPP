@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 13:16:30 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/09 15:49:43 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:32:02 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,12 @@ void	Replace::replace_line(std::ifstream &file)
 	std::string		tmp;
 	std::string		name_replace(_filename + ".replace");
 	std::ofstream	out_file;
-
 	out_file.open(name_replace.c_str());
+	if (!out_file)
+	{
+		std::cout << "Can't create the file \n";
+		return ;
+	}
 	while (std::getline(file, line))
 	{
 		try

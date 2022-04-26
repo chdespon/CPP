@@ -6,19 +6,19 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 15:53:41 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/09 16:17:59 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/04/22 19:40:47 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int	main()
 {
-	Karen	Karen;
+	Harl	Harl;
 
-	Karen.complain("debug");
-	Karen.complain("info");
-	Karen.complain("warning");
-	Karen.complain("error");
+	Harl.complain("DEBUG");
+	Harl.complain("INFO");
+	Harl.complain("WARNING");
+	Harl.complain("ERROR");
 	return (0);
 }

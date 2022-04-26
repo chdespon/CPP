@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 19:26:47 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/08 15:59:35 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:13:31 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class HumanB
 
 		std::string	getName(void) const {return _name;}
 
-		void	setWeapon(Weapon weapon);
+		void	setWeapon(Weapon &weapon);
 
 		void	attack();
 };
