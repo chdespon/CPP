@@ -52,8 +52,8 @@ $(NAME):		$(INC_DIR) $(OBJS) Makefile
 				@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
 exec: $(NAME)
-				@echo "Launch Binary File $(_BLUE)$(NAME)$(_WHITE)\n-----"
-				@./$(NAME)
+				@echo "Launch Script $(_BLUE)$(NAME)$(_WHITE)\n-----"
+				@sh test_script.sh
 				@echo "-----\n$(_BLUE)$(NAME) $(_GREEN)successfully end$(_WHITE)\n-----"
 
 re: fclean all
