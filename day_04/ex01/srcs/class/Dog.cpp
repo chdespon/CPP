@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 18:38:18 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/04 17:43:59 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/09 14:59:56 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ Dog	&Dog::operator=(const Dog &rhs)
 	return (*this);
 }
 
-Brain*	Dog::get_brain_access( void ) const
+Brain	*Dog::get_brain_access(void)const
 {
 	return (_brain);
 }

@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 16:52:31 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/02 16:55:12 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/11 16:07:26 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ WrongCat::WrongCat(const WrongCat &cpy)
 WrongCat::~WrongCat(void)
 {
 	std::cout << "Destruction of: " << _type << std::endl;
+}
+
+void	WrongCat::makeSound(void) const
+{
+	std::cout << "Wrong cat MIAOU !!!" << std::endl;
 }
 
 WrongCat	&WrongCat::operator=(const WrongCat &rhs)

@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 18:45:43 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/01 19:23:54 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/11 15:44:41 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat : public Animal
 	public:
 		Cat();
 		Cat(const Cat &cpy);
-		~Cat();
+		virtual ~Cat();
 
 		Cat	&operator=(const Cat &rhs);
 

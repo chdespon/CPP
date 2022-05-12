@@ -1,6 +1,6 @@
 NAME = DiamondTrap
 
-CC = clang++
+CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow #-g3 -fsanitize=address
 

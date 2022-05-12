@@ -1,6 +1,6 @@
 NAME = Form
 
-CC = clang++
+CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g#3 -fsanitize=address
 
@@ -10,7 +10,7 @@ INC_DIR	= $(shell find includes -type d)
 
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
-SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
 			PresidentialPardonForm.cpp RobotomyRequestForm.cpp
 
 OBJ_DIR = objs
@@ -63,7 +63,7 @@ clean:
 				@echo -n "$(_WHITE)Deleting Objects Directory $(_YELLOW)$(OBJ_DIR)" \
 				"$(_WHITE) ... "
 				@rm -rf $(OBJ_DIR)
-				@rm -f *.replace
+				@rm -f *_shrubbery
 				@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
 fclean:			clean

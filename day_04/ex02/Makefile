@@ -1,6 +1,6 @@
 NAME = AbstractClass
 
-CC = clang++
+CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 #-g3 -fsanitize=address
 
@@ -10,7 +10,7 @@ INC_DIR	= $(shell find includes -type d)
 
 vpath %.cpp $(foreach dir, $(SRCS_DIR), $(dir):)
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS = main.cpp AAnimal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 OBJ_DIR = objs
 

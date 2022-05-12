@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 14:20:42 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/15 17:45:14 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/12 18:34:02 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 const char	*Intern::BadFormNameExeption::what() const throw()
 {
-	return ("Bad form norm");
+	return ("Intern can't create this Form");
 }
 
 Intern::Intern(void)
@@ -30,7 +30,11 @@ Intern::Intern(void)
 
 Intern::Intern(const Intern &cpy)
 {
-	*this = cpy;
+	for (size_t i = 0; i < 3; i++)
+	{
+		_formName[i] = cpy._formName[i];
+		_formType[i] = cpy._formType[i];
+	}
 	std::cout << "Copy constructor called (Intern)" << std::endl;
 }
 
@@ -44,13 +48,20 @@ Intern::~Intern(void)
 Intern	&Intern::operator=(const Intern &rhs)
 {
 	if (this != &rhs)
-	{}
+	{
+		for (size_t i = 0; i < 3; i++)
+		{
+			delete _formType[i];
+			_formName[i] = rhs._formName[i];
+			_formType[i] = rhs._formType[i];
+		}
+	}
 	return (*this);
 }
 
-Form	*Intern::makeForm(std::string form, std::string target)
+AForm	*Intern::makeForm(std::string form, std::string target)
 {
-	Form	*clone = NULL;
+	AForm	*clone = NULL;
 
 	for (size_t i = 0; i < 3; i++)
 	{

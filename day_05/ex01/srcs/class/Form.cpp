@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 18:05:06 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/11 14:47:32 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:22:05 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ const char	*Form::GradeTooLowException::what(void) const throw()
 	return ("Grade is too low");
 }
 
-const char *Form::FormSignedException::what(void) const throw()
+const char	*Form::FormSignedException::what(void) const throw()
 {
 	return ("Form has been signed already");
 }
@@ -37,12 +37,19 @@ Form::Form(std::string name, int grade_to_sign, int grade_to_execute):
 _name(name), _signed(false), _gradeToSign(grade_to_sign), _gradeToExecute(grade_to_execute)
 {
 	std::cout << "Name/GradeToSign/GradeToExecute constructor called (Form)" << std::endl;
+	if (_gradeToSign < 1 || _gradeToSign > 150)
+		throw Form::GradeTooHighException();
+	if (_gradeToExecute < 1 || _gradeToExecute > 150)
+		throw Form::GradeTooHighException();
 }
 
 Form::Form(const Form &cpy):
 _name(cpy._name), _signed(cpy._signed), _gradeToSign(cpy._gradeToSign), _gradeToExecute(cpy._gradeToExecute)
 {
-	*this = cpy;
+	if (_gradeToSign < 1 || _gradeToSign > 150)
+		throw Form::GradeTooHighException();
+	if (_gradeToExecute < 1 || _gradeToExecute > 150)
+		throw Form::GradeTooHighException();
 	std::cout << "Copy constructor called (Form)" << std::endl;
 }
 

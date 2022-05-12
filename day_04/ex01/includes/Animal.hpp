@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 18:13:01 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/04 17:26:11 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:02:55 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class Animal
 		virtual void	makeSound() const;
 
 		std::string	getType() const;
-
 };
 
 #endif

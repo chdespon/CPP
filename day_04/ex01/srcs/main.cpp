@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 18:16:16 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/04 18:15:17 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/09 15:03:23 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,17 @@ int	main()
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << "-------------------------------" << std::endl;
-	std::cout << "-----------MakeSound-----------" << std::endl;
-	std::cout << "-------------------------------" << std::endl;
+	std::cout << j->getType() << " " << "\n";
+	std::cout << i->getType() << " " << "\n";
+	std::cout << "-------------------------------" << "\n";
+	std::cout << "-----------MakeSound-----------" << "\n";
+	std::cout << "-------------------------------" << "\n";
 	i->makeSound();
 	j->makeSound();
-	std::cout << std::endl;
-	std::cout << "---------------------------------" << std::endl;
-	std::cout << "--Creating tab of Dogs and Cats--" << std::endl;
-	std::cout << "---------------------------------" << std::endl;
+	std::cout << "\n";
+	std::cout << "---------------------------------" << "\n";
+	std::cout << "--Creating tab of Dogs and Cats--" << "\n";
+	std::cout << "---------------------------------" << "\n";
 
 	for (size_t i = 0; i < 10; i++)
 	{
@@ -42,26 +42,26 @@ int	main()
 			tab[i] = new Dog();
 	}
 
-	std::cout << std::endl;
-	std::cout << "---------------------------------" << std::endl;
-	std::cout << "--Deleting tab of Dogs and Cats--" << std::endl;
-	std::cout << "---------------------------------" << std::endl;
+	std::cout << "\n";
+	std::cout << "---------------------------------" << "\n";
+	std::cout << "--Deleting tab of Dogs and Cats--" << "\n";
+	std::cout << "---------------------------------" << "\n";
 
 	for (size_t i = 0; i < 10; i++)
 		delete tab[i];
 
-	std::cout << std::endl;
-	std::cout << "-----------------------------------" << std::endl;
-	std::cout << "Cloning a very good boy for science" << std::endl;
-	std::cout << "-----------------------------------" << std::endl;
-	std::cout << "Making a good boy" << std::endl;
+	std::cout << "\n";
+	std::cout << "-----------------------------------" << "\n";
+	std::cout << "Cloning a very good boy for science" << "\n";
+	std::cout << "-----------------------------------" << "\n";
+	std::cout << "Making a good boy" << "\n";
 
 	const Dog*	good_boy = new Dog();
-	std::cout << "Creating a copy of a good boy:" << std::endl;
+	std::cout << "Creating a copy of a good boy:" << "\n";
 	const Dog*	copy = new Dog(*good_boy);
 
 	std::cout << "Address of the good boy brain             : "
-		<< &(*(good_boy->get_brain_access())) << std::endl;
+		<< &(*(good_boy->get_brain_access())) << "\n";
 
 	std::cout << "Address of the copy of the good boy brain : "
 		<< &(*(copy->get_brain_access())) << std::endl;

@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 16:48:03 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/02 16:49:53 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/11 16:06:47 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ class WrongCat : public WrongAnimal
 	public:
 		WrongCat();
 		WrongCat(const WrongCat &cpy);
-		~WrongCat();
+		virtual ~WrongCat();
 
 		WrongCat	&operator=(const WrongCat &rhs);
+
+		void	makeSound() const;
 };
 
 #endif

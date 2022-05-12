@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 13:47:39 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 19:56:38 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:14:01 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,8 @@ Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), _grade(grade)
 	std::cout << "Name/Grade constructor called (Bureaucrat)" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &cpy)
+Bureaucrat::Bureaucrat(const Bureaucrat &cpy): _name(cpy._name), _grade(cpy._grade)
 {
-	*this = cpy;
 	std::cout << "Copy constructor called (Bureaucrat)" << std::endl;
 }
 
@@ -92,7 +91,7 @@ void	Bureaucrat::downgrade(void)
 	}
 }
 
-void	Bureaucrat::signForm(Form &form) const
+void	Bureaucrat::signForm(AForm &form) const
 {
 	try
 	{
@@ -106,7 +105,7 @@ void	Bureaucrat::signForm(Form &form) const
 	}
 }
 
-void	Bureaucrat::executeForm(Form const &form) const
+void	Bureaucrat::executeForm(AForm const &form) const
 {
 	try
 	{

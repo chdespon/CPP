@@ -6,16 +6,16 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:21:49 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/15 17:42:15 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/12 16:05:56 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
 
-# include "Form.hpp"
+# include "AForm.hpp"
 
-class PresidentialPardonForm: public Form
+class PresidentialPardonForm: public AForm
 {
 	private:
 		std::string	_target;
@@ -29,7 +29,7 @@ class PresidentialPardonForm: public Form
 		PresidentialPardonForm	&operator=(const PresidentialPardonForm &rhs);
 
 		void	executeForm(void) const;
-		Form	*clone(std::string target);
+		AForm	*clone(std::string target);
 };
 
 #endif

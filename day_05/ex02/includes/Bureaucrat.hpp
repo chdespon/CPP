@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 13:47:38 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 17:31:28 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/12 15:50:18 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
-# include "Form.hpp"
+# include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -48,8 +48,8 @@ class Bureaucrat
 		int			getGrade(void) const;
 		void		upgrade(void);
 		void		downgrade(void);
-		void		signForm(Form &form) const;
-		void		executeForm(Form const &form) const;
+		void		signForm(AForm &form) const;
+		void		executeForm(AForm const &form) const;
 };
 
 std::ostream	&operator<<(std::ostream &os, const Bureaucrat &rhs);

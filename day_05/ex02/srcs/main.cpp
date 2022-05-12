@@ -6,13 +6,13 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 19:26:52 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/14 20:00:32 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/12 15:54:02 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
@@ -23,19 +23,19 @@ int		main(void)
 	Bureaucrat	Albe("Albe", 148);
 
 	Lucas.upgrade();
-	std::cout << Lucas << std::endl;
+	std::cout << Lucas << "\n";
 
 	Albe.downgrade();
-	std::cout << Albe << std::endl;
+	std::cout << Albe << "\n";
 
 	std::cout << "\n_____TEST OF SHRUBBERY CREATION FORM_____\n\n";
 
 	ShrubberyCreationForm	scf("fuc*?#!");
 
-	std::cout << scf << std::endl;
+	std::cout << scf << "\n";
 	Albe.signForm(scf);
 	Lucas.signForm(scf);
-	std::cout << std::endl;
+	std::cout << "\n";
 	Lucas.executeForm(scf);
 	Albe.executeForm(scf);
 
@@ -43,10 +43,10 @@ int		main(void)
 
 	RobotomyRequestForm	rrf("Marvin");
 
-	std::cout << rrf << std::endl;
+	std::cout << rrf << "\n";
 	Albe.signForm(rrf);
 	Lucas.signForm(rrf);
-	std::cout << std::endl;
+	std::cout << "\n";
 	Lucas.executeForm(rrf);
 	Albe.executeForm(rrf);
 
@@ -54,16 +54,16 @@ int		main(void)
 
 	PresidentialPardonForm	ppf("Arthur");
 
-	std::cout << ppf << std::endl;
+	std::cout << ppf << "\n";
 	Albe.signForm(ppf);
 	Lucas.signForm(ppf);
-	std::cout << std::endl;
+	std::cout << "\n";
 	Lucas.executeForm(ppf);
 	Albe.executeForm(ppf);
 
-	std::cout << std::endl;
-	std::cout << std::endl;
-	std::cout << std::endl;
+	std::cout << "\n";
+	std::cout << "\n";
+	std::cout << "\n";
 	std::cout << std::endl;
 
 	return (0);

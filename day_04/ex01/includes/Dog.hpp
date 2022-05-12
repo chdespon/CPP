@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 18:24:00 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/04 17:26:17 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/11 15:44:13 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ class Dog : public Animal
 	public:
 		Dog();
 		Dog(const Dog &cpy);
-		~Dog();
+		virtual ~Dog();
 
 		Dog	&operator=(const Dog &rhs);
 
 		void	makeSound() const;
 
-		Brain*	get_brain_access( void ) const;
+		Brain	*get_brain_access(void) const;
 };
 
 #endif

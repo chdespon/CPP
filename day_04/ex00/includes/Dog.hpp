@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 18:24:00 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/02 16:56:06 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/11 15:44:47 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : public Animal
 	public:
 		Dog();
 		Dog(const Dog &cpy);
-		~Dog();
+		virtual ~Dog();
 
 		Dog	&operator=(const Dog &rhs);
 

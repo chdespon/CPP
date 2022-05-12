@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 12:23:52 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/04 12:26:45 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/09 14:57:37 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Brain
 {
 	private:
-		std::string _ideas[100];
+		std::string	_ideas[100];
 
 	public:
 		Brain();

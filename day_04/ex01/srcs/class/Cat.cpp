@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 18:47:37 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/04 17:43:54 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/09 14:58:35 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ Cat	&Cat::operator=(const Cat &rhs)
 	return (*this);
 }
 
-Brain*	Cat::get_brain_access( void ) const
+Brain	*Cat::get_brain_access(void)const
 {
 	return (_brain);
 }

@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 15:54:15 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/09 17:39:43 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/10 15:30:22 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 int	main()
 {
 
-	std::cout << "------------------------------------" << std::endl;
-	std::cout << "Constructing Materia and Characters:" << std::endl;
-	std::cout << "------------------------------------" << std::endl;
+	std::cout << "------------------------------------" << "\n";
+	std::cout << "Constructing Materia and Characters:" << "\n";
+	std::cout << "------------------------------------" << "\n";
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
@@ -35,19 +35,19 @@ int	main()
 
 	ICharacter* bob = new Character("bob");
 
-	std::cout << std::endl;
-	std::cout << "---------------------------------------------------------" << std::endl;
-	std::cout << "Testing use() function (and with an empty inventory slot)"<< std::endl;
-	std::cout << "---------------------------------------------------------" << std::endl;
+	std::cout << "\n";
+	std::cout << "---------------------------------------------------------" << "\n";
+	std::cout << "Testing use() function (and with an empty inventory slot)"<< "\n";
+	std::cout << "---------------------------------------------------------" << "\n";
 
 	me->use(0, *bob);
 	me->use(1, *bob);
 	me->use(2, *bob);
 
-	std::cout << std::endl;
-	std::cout << "----------------------------" << std::endl;
-	std::cout << "Testing inventory size limit" << std::endl;
-	std::cout << "----------------------------" << std::endl;
+	std::cout << "\n";
+	std::cout << "----------------------------" << "\n";
+	std::cout << "Testing inventory size limit" << "\n";
+	std::cout << "----------------------------" << "\n";
 
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
@@ -56,35 +56,35 @@ int	main()
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 
-	std::cout << std::endl;
-	std::cout << "------------------------------" << std::endl;
-	std::cout << "Testing the unequip() function" << std::endl;
-	std::cout << "------------------------------" << std::endl;
+	std::cout << "\n";
+	std::cout << "------------------------------" << "\n";
+	std::cout << "Testing the unequip() function" << "\n";
+	std::cout << "------------------------------" << "\n";
 
-	std::cout << "Spell list is :" << std::endl;
+	std::cout << "Spell list is :" << "\n";
 	me->use(0, *bob);
 	me->use(1, *bob);
 	me->use(2, *bob);
 	me->use(3, *bob);
 
-	std::cout << std::endl << "Spell index 1 is :";
+	std::cout << "\n" << "Spell index 1 is :";
 	me->use(1, *bob);
-	std::cout << std::endl << "Unequipping spell index 1..." << std::endl;
+	std::cout << "\n" << "Unequipping spell index 1..." << "\n";
 	me->unequip(1);
-	std::cout << std::endl << "Spell index 1 is :";
+	std::cout << "\n" << "Spell index 1 is :";
 	me->use(1, *bob);
-	std::cout << std::endl << "Equipping a new spell (ice) :" << std::endl;
+	std::cout << "\n" << "Equipping a new spell (ice) :" << "\n";
 	me->equip(tmp);
 
-	std::cout << std::endl << "New spells are :" << std::endl;
+	std::cout << "\n" << "New spells are :" << "\n";
 	me->use(0, *bob);
 	me->use(1, *bob);
 	me->use(2, *bob);
 	me->use(3, *bob);
 
-	std::cout << std::endl;
-	std::cout << "----------------------------------" << std::endl;
-	std::cout << "Destroying Materia and Characters:" << std::endl;
+	std::cout << "\n";
+	std::cout << "----------------------------------" << "\n";
+	std::cout << "Destroying Materia and Characters:" << "\n";
 	std::cout << "----------------------------------" << std::endl;
 	delete bob;
 	delete me;

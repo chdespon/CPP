@@ -6,28 +6,27 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 15:37:30 by chdespon          #+#    #+#             */
-/*   Updated: 2022/03/15 17:42:50 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/12 19:12:07 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm(void):
-Form("RobotomyRequest", 72, 45), _target("No target")
+AForm("RobotomyRequest", 72, 45), _target("No target")
 {
 	std::cout << "Default constructor called (RobotomyRequestForm)" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target):
-Form("RobotomyRequest", 72, 45), _target(target)
+AForm("RobotomyRequest", 72, 45), _target(target)
 {
 	std::cout << "Target constructor called (RobotomyRequestForm)" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &cpy):
-Form("RobotomyRequest", 72, 45), _target(cpy._target)
+AForm(cpy), _target(cpy._target)
 {
-	*this = cpy;
 	std::cout << "Copy constructor called (RobotomyRequestForm)" << std::endl;
 }
 
@@ -56,8 +55,8 @@ RobotomyRequestForm	&RobotomyRequestForm::operator=(const RobotomyRequestForm &r
 	return (*this);
 }
 
-Form	*RobotomyRequestForm::clone(std::string target)
+AForm	*RobotomyRequestForm::clone(std::string target)
 {
-	Form	*clone = new RobotomyRequestForm(target);
+	AForm	*clone = new RobotomyRequestForm(target);
 	return (clone);
 }
