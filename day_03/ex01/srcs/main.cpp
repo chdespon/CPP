@@ -6,7 +6,7 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:46:23 by chdespon          #+#    #+#             */
-/*   Updated: 2022/02/17 17:18:23 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/05 15:02:12 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,8 @@ int	main()
 	Vincent.beRepaired(100);
 	Vincent.attack("Albe");
 	Albe.takeDamage(Vincent.getAttackDamage());
-	Vincent.attack("Albe");
-	Albe.takeDamage(Vincent.getAttackDamage());
 	Albe.beRepaired(100);
 	Vincent.attack("Lucas");
-	Lucas.takeDamage(Vincent.getAttackDamage());
+	Vincent.guardGate();
 	return (0);
 }
