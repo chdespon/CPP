@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 13:36:13 by chdespon          #+#    #+#             */
-/*   Updated: 2022/05/18 18:12:58 by chdespon         ###   ########.fr       */
+/*   Created: 2022/05/18 18:38:40 by chdespon          #+#    #+#             */
+/*   Updated: 2022/05/18 19:26:53 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ConversionScal.hpp"
+#ifndef Data_HPP
+# define Data_HPP
 
-int	main(int ac, char **av)
+#include <iostream>
+#include <stdint.h>
+#include <stdlib.h>
+#include <time.h>
+
+typedef struct		s_Data
 {
-	if (ac == 2)
-	{
-		ConversionScal	conv(av[1]);
+	char	charData;
+	int		intData;
+	float	floatData;
+	double	doubleData;
+}					Data;
 
-		conv.setPrecision();
-		conv.charConvert();
-		conv.intConvert();
-		conv.floatConvert();
-		conv.doubleConvert();
-	}
-	else
-		std::cout << "Invalid number of arguments" << std::endl;
-	return (0);
-}
+void		printData(Data *ptr);
+
+uintptr_t	serialize(Data *ptr);
+Data		*deserialize(uintptr_t raw);
+
+#endif

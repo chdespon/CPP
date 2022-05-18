@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/16 13:36:13 by chdespon          #+#    #+#             */
-/*   Updated: 2022/05/18 18:12:58 by chdespon         ###   ########.fr       */
+/*   Created: 2022/05/18 19:04:24 by chdespon          #+#    #+#             */
+/*   Updated: 2022/05/18 19:27:05 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ConversionScal.hpp"
+#ifndef BASE_HPP
+# define BASE_HPP
 
-int	main(int ac, char **av)
+# include <stdlib.h>
+# include <cstdlib>
+# include <iostream>
+# include <time.h>
+
+class Base
 {
-	if (ac == 2)
-	{
-		ConversionScal	conv(av[1]);
+	public:
+		virtual ~Base() {};
+};
 
-		conv.setPrecision();
-		conv.charConvert();
-		conv.intConvert();
-		conv.floatConvert();
-		conv.doubleConvert();
-	}
-	else
-		std::cout << "Invalid number of arguments" << std::endl;
-	return (0);
-}
+class A: public Base {};
+class B: public Base {};
+class C: public Base {};
+
+Base	*generate(void);
+void	identify(Base *p);
+void	identify(Base &p);
+
+#endif
