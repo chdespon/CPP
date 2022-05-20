@@ -6,14 +6,14 @@
 /*   By: chdespon <chdespon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 19:06:54 by chdespon          #+#    #+#             */
-/*   Updated: 2022/05/18 19:47:37 by chdespon         ###   ########.fr       */
+/*   Updated: 2022/05/19 12:14:43 by chdespon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Base.hpp"
 
 
-void		identify(Base *p)
+void	identify(Base *p)
 {
 	A	*Type_A = dynamic_cast<A*>(p);
 	B	*Type_B = dynamic_cast<B*>(p);
@@ -27,7 +27,7 @@ void		identify(Base *p)
 		std::cout << "C";
 }
 
-void		identify(Base &p)
+void	identify(Base &p)
 {
 	try
 	{
